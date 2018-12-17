@@ -1,0 +1,37 @@
+<div class="convertForm">
+  <div class="container">
+    <form [formGroup]="currencyForm" (ngSubmit)="calculate()">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group" [ngClass]="{ 'is-invalid': submitted && form.amount.errors }">
+            <label for="output">USD</label>
+            <input
+              class="form-control"
+              [(ngModel)]="amount"
+              OnlyNumber="true"
+              formControlName="amount"
+              id="amount"
+              type="text"
+              required>
+            <div *ngIf="submitted && form.amount.errors" class="invalid-feedback">
+              <small *ngIf="form.amount.errors.required">* Enter an amount to convert</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="output">EUR</label>
+            <input
+              type="text"
+              class="form-control"
+              id="output"
+              [ngModelOptions]="{standalone: true}"
+              [(ngModel)]="output"
+              disabled>
+          </div>
+        </div>
+      </div>
+      <button class="col-sm-4 col-sm-offset-4 btn btn-success" type="submit">CALCULATE</button>
+    </form>
+  </div>
+</div>

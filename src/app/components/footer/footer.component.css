@@ -1,0 +1,23 @@
+footer{
+   background:#dadfe3;
+   margin-top: 50px;
+   box-shadow: inset 0px 7px 17px -7px;
+   padding-top: 40px;
+   padding-bottom: 20px;
+}
+footer ul{
+   padding: 0px;
+}
+footer li{
+   margin: 5px 0px;
+   list-style: none;
+}
+footer a{
+   color: #4e4e4e;
+}
+footer .inline-icons li{
+   display: inline;
+   font-size: 23px;
+   margin-right: 14px;
+   color: #6d6d6d;
+}
